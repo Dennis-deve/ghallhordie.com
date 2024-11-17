@@ -63,7 +63,7 @@ a {
 
 /* Hero Section */
 .hero-section {
-  background-image: url('https://your-background-image.jpg');
+  background-image: url('images/IMG_9588.jpg');
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -130,4 +130,38 @@ footer {
 .footer-container {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Encouragement Section Styles */
+.encouragement-section {
+  background: #2d2d2d;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.encouragement-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.encouragement-section h2 {
+  color: #ff9a8b;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.encouragement-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.heart-symbol {
+  font-size: 1.5rem;
+  color: #ff6f61;
+  margin-top: 20px;
 }
