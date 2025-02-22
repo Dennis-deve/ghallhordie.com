@@ -7,23 +7,10 @@
 }
 
 body {
-  background-color: #121212; /* Dark background similar to the reference */
-  color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-a {
-  text-decoration: none;
+  background-color: #121212;
   color: #e0e0e0;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Navbar */
 .navbar {
   background-color: #1c1c1c;
   padding: 15px 0;
@@ -34,8 +21,6 @@ a {
 }
 
 .navbar-container {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,40 +42,54 @@ a {
   margin-left: 20px;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
 .nav-links a:hover {
   color: #ff6f61;
 }
 
-/* Hero Section */
 .hero-section {
-  background-image: url('images/IMG_9588.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
   position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  color: #ff9a8b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-overlay h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  color: #ff9a8b;
 }
 
 .hero-overlay p {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
-/* Content Sections */
 .content-section {
   background: #1c1c1c;
   margin: 20px 0;
@@ -115,21 +114,14 @@ a {
   height: auto;
   margin-top: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 footer {
   background-color: #1c1c1c;
   color: #e0e0e0;
   padding: 20px 0;
   text-align: center;
   margin-top: 40px;
-}
-
-.footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 /* Encouragement Section Styles */
@@ -164,4 +156,58 @@ footer {
   font-size: 1.5rem;
   color: #ff6f61;
   margin-top: 20px;
+}
+.video-highlight {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlight-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.highlight-overlay h2 {
+  font-size: 2rem;
+}
+
+.highlight-overlay p {
+  font-size: 1.2rem;
+}
+/* Add bump effect on hover */
+.content-section h2,
+.content-section p,
+.highlight-overlay h2,
+.highlight-overlay p,
+.hero-overlay h1,
+.hero-overlay p {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover or touch effect */
+.content-section:hover h2,
+.content-section:hover p,
+.highlight-overlay:hover h2,
+.highlight-overlay:hover p,
+.hero-overlay:hover h1,
+.hero-overlay:hover p {
+  transform: translateY(-5px);
 }
